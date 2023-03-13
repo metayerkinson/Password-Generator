@@ -1,42 +1,33 @@
-// Assignment Code
 var generateBtn = document.querySelector("#generate");
-//pulled password  id from html
 
 // Write password to the #password input
-// step 1 determine what needs in the password generator(lowercase, uppercase, numeric, and/or special characters)
-const alpha =("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
-const Number=" 0123456789";
-const symbols ="!@#$%^&*(()_-=+:'><,.?/"
 
-// step 2 add the variables
-const passwordText=document.getElementById("password");
-const length=document.getElementById("length")
-const myNumber=document.getElementById("numbers")
-const passwordSymbols=document.getElementById("symbols")
-const passwordletters=document.getElementById("letters")
-
-//var password=document.getElementById("password")
-var generateBtn=document.getElementById("generate")
-
-console.log()
+//set up password criteria
+const Numbers=" 0123456789"
+const Letters="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+const Symbols="!@#$%^&*(()_-=+:'><,.?/"
 
 
-// make function to generate 
-function generatePassword(passwordLength, chars){
-  let passwordStr = "";
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
 
-  for (let i = 0; i < passwordLength; i++){
-    let randomNumer = Math.floor(Math.random() * chars.length);
-    passwordStr += chars.substring(randomNumer, randomNumer + 1)
-  }
-  console.log(passwordStr);
-   return passwordStr;
+  passwordText.value = password;
+
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", () => {
-  let characters = myNumber.value + passwordSymbols.value + passwordletters.value;
-  passwordText.value = generatePassword(length.value, characters);
-});
+generateBtn.addEventListener("click", writePassword);
 
 
+
+// 1. define password criteria/ 
+//lowercase, uppercase, numeric, and/or special characters WHEN I answer each prompt
+//length of at least 8 characters and no more than 128 characters
+
+//2.input should be validated and at least one character type should be selected
+//3.either displayed in an alert or written to the page
+
+//3.presented with a series of prompts for password criteria
+//WHEN prompted for password criteria
+//THEN I select which criteria to include in the password
