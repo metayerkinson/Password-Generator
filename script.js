@@ -5,7 +5,15 @@ var generateBtn = document.querySelector("#generate");
 //set up password criteria
 const Numbers=" 0123456789"
 const Letters="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-const Symbols="!@#$%^&*(()_-=+:'><,.?/"
+const Symbols="!@#$%^&*(()_-=+:'><,.?/~`,.|\/?:;-+"
+
+//2. started targeting elements in html  citation "(Build a Configurable Random Password Generator With JavaScript. (n.d.). Web Design Envato Tuts+. Retrieved March 13, 2023, from https://webdesign.tutsplus.com/tutorials/build-a-configurable-random-password-generator-with-javascript--cms-93262)'
+const passwordText=document.getElementById("password");
+const length=document.getElementById("length")
+const myNumber=document.getElementById("numbers")
+const passwordSymbols=document.getElementById("symbols")
+
+
 
 
 function writePassword() {
@@ -18,6 +26,20 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+
+// created the window propmt    citation->  "Window.prompt() - Web APIs | MDN. (n.d.). Developer.mozilla.org. Retrieved March 13, 2023, from https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt
+
+
+
+prompt()
+prompt("Do you want to use Symbols?")
+prompt("Do you want to use Numbers?")
+prompt("Do you want to use Upercase Letters?")
+prompt("Do you want to use Lowercase Letters?")
+prompt(message, defaultValue)
+
 
 
 
