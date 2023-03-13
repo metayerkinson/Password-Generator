@@ -17,7 +17,7 @@ const passwordSymbols=document.getElementById("symbols")
 
 
 function writePassword() {
-  var password = generatePassword();
+  var password = generatePassword("writePassword");
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
@@ -33,12 +33,12 @@ generateBtn.addEventListener("click", writePassword);
 
 
 
-prompt()
+var sign =prompt("Click OK to select your password criteria!")
 prompt("Do you want to use Symbols?")
 prompt("Do you want to use Numbers?")
 prompt("Do you want to use Upercase Letters?")
 prompt("Do you want to use Lowercase Letters?")
-prompt(message, defaultValue)
+
 
 
 
