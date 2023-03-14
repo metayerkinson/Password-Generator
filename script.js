@@ -13,9 +13,9 @@ const passwordText=document.getElementById("password");
 
 function generatePassword(){
 
-  //******remove documentbyid elemenets after guiance from a tutor.*******
+  //******remove documented elements after guidance from a tutor.*******
 
-  // created the window prompt for user to choose and comfirm what thier password critiera// 
+  // created the window prompt for users to choose and confirm their password criteria// 
 
 
   // window prompt//
